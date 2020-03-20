@@ -25,20 +25,23 @@ class Fantome
 
 class Jeu
 {
-  protected:
-    Case *terrain;
-    int largeur, hauteur; // Nombre de cases en largeur et en hauteur
-    int posPacmanX, posPacmanY;
 
-  public:
-    list<Fantome> fantomes;
 
-  public:
-    Jeu();
-    Jeu(const Jeu &)=delete;
-    ~Jeu();
 
-    Jeu &operator=(const Jeu &)=delete;
+    protected:
+        Case *terrain;
+        int largeur, hauteur; // Nombre de cases en largeur et en hauteur
+        int posPacmanX, posPacmanY;
+
+    public:
+        list<Fantome> fantomes;
+
+    public:
+        Jeu();
+        Jeu(const Jeu &)=delete;
+        ~Jeu();
+
+        Jeu &operator=(const Jeu &)=delete;
 
     bool init();
     void evolue();

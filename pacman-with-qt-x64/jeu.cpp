@@ -121,6 +121,11 @@ void Jeu::evolue()
             // Changement de direction
             itFantome->dir = (Direction)(rand()%4);
     }
+
+    for(auto it = fantomes.begin(); it != fantomes.end(); it++){
+        if(it->getPosX() == getPacmanX() && it->getPosY() == getPacmanY())
+            fantomes.erase(it);
+    }
 }
 
 int Jeu::getNbCasesX() const
